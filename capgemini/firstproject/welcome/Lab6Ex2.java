@@ -15,6 +15,7 @@ public class Lab6Ex2 {
 		lab.readFile();
 	}
 	public void readFile() {
+		int lineNnum=1;
 		String line=null;
 		String fname;
 		System.out.println("Enter the name of the File with Extension : ");
@@ -24,7 +25,8 @@ public class Lab6Ex2 {
 			BufferedReader mb = new BufferedReader(mfile);
 			try {
 				while((line=mb.readLine())!=null) {
-					System.out.println(line);
+					System.out.println(lineNnum+" "+line);
+					lineNnum++;
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
